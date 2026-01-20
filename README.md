@@ -38,7 +38,7 @@ Trigger the skill with phrases like:
 ## Algorithm Source
 
 Based on X's open-source recommendation algorithm:
-- https://github.com/twitter/the-algorithm
+- https://github.com/xai-org/x-algorithm
 
 ## License
 

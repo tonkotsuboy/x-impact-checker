@@ -4,7 +4,7 @@ Based on X's open-source recommendation algorithm.
 
 ## Source
 
-- Repository: https://github.com/twitter/the-algorithm
+- Repository: https://github.com/xai-org/x-algorithm
 - Weighted Scorer: `home-mixer/scorers/weighted_scorer.rs`
 - ML Model: Phoenix (Grok-based transformer)
 
