@@ -14,6 +14,9 @@ X Impact Checker is a Claude skill that analyzes X (Twitter) posts for viral pot
 
 ```
 /
+├── .claude/
+│   └── rules/
+│       └── project-conventions.md        # Language and commit standards
 ├── skills/x-impact-checker/
 │   ├── SKILL.md                          # Skill definition and detailed scoring criteria
 │   └── references/algorithm-weights.md   # Complete reference for X's official algorithm
@@ -76,10 +79,6 @@ Normalized = max(0, min(100, Final Score))
 # Verify scoring element count across 3 files
 grep -c "points\|潜在力" README.md skills/x-impact-checker/SKILL.md skills/x-impact-checker/references/algorithm-weights.md
 ```
-
-### Version Control
-- `.DS_Store` excluded via `.gitignore`
-- Commit messages in Japanese (e.g., "19要素スコアリングシステムに拡張")
 
 ## Key Design Decisions
 
