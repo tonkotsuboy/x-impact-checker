@@ -15,46 +15,40 @@ npx add-skill tonkotsuboy/x-impact-checker
 
 Trigger the skill with phrases like:
 
-**English:**
 - "Check if this will go viral: [your post]"
 - "Make this post buzz: [your post]"
 - "Optimize my tweet: [your post]"
-
-**Japanese:**
-- "バズるかチェックして: [投稿内容]"
-- "Xでバズる投稿にして: [投稿内容]"
-- "伸びるかチェックして: [投稿内容]"
 
 ## Scoring System (100 points)
 
 Based on X's official recommendation algorithm with 19 scoring elements:
 
 ### Core Engagement (60 points)
-- Reply Potential (返信潜在力): 22 points
-- Retweet Potential (リツイート潜在力): 16 points
-- Favorite Potential (いいね潜在力): 12 points
-- Quote Potential (引用潜在力): 10 points
+- Reply Potential: 22 points
+- Retweet Potential: 16 points
+- Favorite Potential: 12 points
+- Quote Potential: 10 points
 
 ### Extended Engagement (25 points)
-- Dwell Time (滞在時間): 6 points
-- Continuous Dwell Time (継続滞在時間): 4 points
-- Click Potential (クリック潜在力): 5 points
-- Photo Expand Potential (写真展開潜在力): 4 points
-- Video View Potential (動画視聴潜在力): 3 points
-- Quoted Click Potential (引用クリック潜在力): 3 points
+- Dwell Time: 6 points
+- Continuous Dwell Time: 4 points
+- Click Potential: 5 points
+- Photo Expand Potential: 4 points
+- Video View Potential: 3 points
+- Quoted Click Potential: 3 points
 
 ### Relationship Building (15 points)
-- Profile Click (プロフィールクリック): 5 points
-- Follow Potential (フォロー潜在力): 4 points
-- Share Potential (共有潜在力): 2 points
-- Share via DM (DM経由共有): 2 points
-- Share via Copy Link (リンクコピー共有): 2 points
+- Profile Click: 5 points
+- Follow Potential: 4 points
+- Share Potential: 2 points
+- Share via DM: 2 points
+- Share via Copy Link: 2 points
 
 ### Negative Signals
-- Not Interested Risk (興味なしリスク): -5 to -15 points
-- Mute Risk (ミュートリスク): -5 to -15 points
-- Block Risk (ブロックリスク): -10 to -25 points
-- Report Risk (報告リスク): -15 to -30 points
+- Not Interested Risk: -5 to -15 points
+- Mute Risk: -5 to -15 points
+- Block Risk: -10 to -25 points
+- Report Risk: -15 to -30 points
 
 ## Algorithm Source
 
