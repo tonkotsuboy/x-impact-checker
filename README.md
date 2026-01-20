@@ -40,12 +40,18 @@ Trigger the skill with phrases like:
 
 ## Algorithm Source
 
-Based on X's open-source recommendation algorithm:
+This skill is based on the publicly documented scoring weights and algorithm specifications from X's open-source recommendation algorithm. It does not directly use code from the original repository, but implements the algorithm concepts independently.
+
+Reference repository:
 - https://github.com/xai-org/x-algorithm
 
 ## License
 
 Apache 2.0
+
+Copyright 2026 tonkotsuboy
+
+Licensed under the Apache License, Version 2.0. See the LICENSE file for details.
 
 ---
 
@@ -64,6 +70,13 @@ npx add-skill tonkotsuboy/x-impact-checker
 - "バズるかチェックして: [投稿内容]"
 - "Xでバズる投稿にして: [投稿内容]"
 - "伸びるかチェックして: [投稿内容]"
+
+## アルゴリズムの出典
+
+このスキルは、Xのオープンソース推薦アルゴリズムで公開されているスコアリングの重み付けやアルゴリズム仕様を参考にしています。元のリポジトリのコードを直接使用しているのではなく、アルゴリズムの概念を独自に実装しています。
+
+参考リポジトリ:
+- https://github.com/xai-org/x-algorithm
 
 ## ライセンス
 
