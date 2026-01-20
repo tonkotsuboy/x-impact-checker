@@ -69,7 +69,7 @@ Licensed under the Apache License, Version 2.0. See the LICENSE file for details
 
 # X Impact Checker (日本語)
 
-X（旧Twitter）の公式推薦アルゴリズムに基づいて、投稿がバズるかどうかをスキルです。
+X（旧Twitter）の公式推薦アルゴリズムに基づいて、投稿がバズるかどうかを分析するスキルです。
 
 ## インストール
 
