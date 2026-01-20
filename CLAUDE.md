@@ -14,95 +14,50 @@ X Impact Checker is a Claude skill that analyzes X (Twitter) posts for viral pot
 
 ```
 /
-├── .claude/
-│   └── rules/
-│       └── project-conventions.md        # Language and commit standards
+├── .claude/rules/project-conventions.md  # Language and commit standards
 ├── skills/x-impact-checker/
-│   ├── SKILL.md                          # Skill definition and detailed scoring criteria
-│   └── references/algorithm-weights.md   # Complete reference for X's official algorithm
-├── README.md                             # Project documentation (English/Japanese)
+│   ├── SKILL.md                          # Skill definition and scoring criteria
+│   └── references/algorithm-weights.md   # X algorithm reference
+├── README.md                             # Bilingual documentation (EN/JP)
 └── LICENSE                               # Apache 2.0
 ```
 
 ## Core Components
 
-### 1. SKILL.md
-Defines the main skill logic:
-- **Scoring system**: Tier 1 (Core Engagement 60 points), Tier 2 (Extended Engagement 25 points), Tier 3 (Relationship Building 15 points), Negative Signals (penalties)
-- **Evaluation criteria**: Detailed scoring guides for each element
-- **Improvement strategies**: ❌ Bad / ⚠️ Better / ✅ Best examples
-- **Output format**: Score, breakdown table, top 5 priority improvements, optimized version
+### SKILL.md
+Main skill logic with 3-tier scoring system (Core/Extended/Relationship Engagement + Negative Signals), evaluation criteria, and improvement strategies in ❌ Bad / ⚠️ Better / ✅ Best format.
 
-### 2. algorithm-weights.md
-Technical reference for X's official algorithm:
-- **Engagement signals**: Positive and negative engagement probabilities predicted by Phoenix ML model
-- **Weights**: Actual weight coefficients from `weighted_scorer.rs`
-- **Conditional logic**: VQV (Video Quality View) 5-second threshold, etc.
-- **Normalization**: Offset/dampening/penalty capping
+### algorithm-weights.md
+Technical reference for X's algorithm: engagement signals, weight coefficients from `weighted_scorer.rs`, conditional logic (VQV threshold), and normalization.
 
-## Scoring System Architecture
+## Scoring Architecture
 
-**100-point system**:
+100-point system with penalty dampening:
 ```
 Final Score = Base Score (0-100) + Penalties (-75 to 0)
 Normalized = max(0, min(100, Final Score))
 ```
 
-**Key algorithm characteristics**:
-1. Reply (22 points) is most important - conversation-driving content ranks highest
-2. Multiple share actions (general/DM/link copy) are distinguished
-3. Two types of dwell time measured (initial read/continuous engagement)
-4. Videos score fully only at 5+ seconds (VQV condition)
-5. Negative signals are dampened to prevent excessive penalization
+**Key characteristics**:
+- Reply (22 points) is highest weighted - conversation drives visibility
+- Multiple share types distinguished (general/DM/link copy)
+- Two dwell time types (initial read/continuous engagement)
+- Videos require 5+ seconds for full score (VQV condition)
+- Negative signals dampened to prevent over-penalization
 
-## Documentation Standards
-
-### Language Separation
-- **English Section**: Lines 1-68 in README.md
-- **Japanese Section**: Lines 70-131 in README.md
-- Each section is completely independent (no cross-translations)
-
-### Attribution Requirements
-- Maintain explicit reference to X's official algorithm (https://github.com/xai-org/x-algorithm)
-- Apache 2.0 license compliance
-- Use "based on publicly documented specifications" rather than "derivative work"
-
-## Common Tasks
-
-### Updating Skill Specifications
-1. Edit `skills/x-impact-checker/SKILL.md` (scoring criteria/improvement strategies)
-2. Synchronize updates to both language sections in `README.md`
-3. Update reference in `algorithm-weights.md` if needed
-
-### Documentation Consistency Check
-```bash
-# Verify scoring element count across 3 files
-grep -c "points\|潜在力" README.md skills/x-impact-checker/SKILL.md skills/x-impact-checker/references/algorithm-weights.md
-```
-
-## Key Design Decisions
+## Design Decisions
 
 1. **Codeless architecture**: Heuristic text analysis, not ML model
-2. **Conservative scoring**: Unknown elements receive baseline scores
-3. **Optimization-focused**: Tool for pre-publishing improvement, not post-hoc analytics
-4. **Language-agnostic**: Detects input language and responds/optimizes in same language
+2. **Conservative scoring**: Unknown elements get baseline scores
+3. **Optimization-focused**: Pre-publishing tool, not post-hoc analytics
+4. **Language-agnostic**: Detects input language, responds in same language
 
-## Limitations (Text Analysis)
+## Text Analysis Limitations
 
-**Cannot detect**:
-- Actual media presence/quality
-- User engagement history
-- Author reputation/follower count
-- Phoenix ML model prediction values
+**Cannot detect**: Actual media, user history, author reputation, Phoenix ML predictions
 
-**Can infer from**:
-- Language patterns (question format, controversial claims)
-- Content structure (threads, lists)
-- Emotional tone
-- Visual indicators (emojis, markdown)
+**Infers from**: Language patterns, content structure, emotional tone, visual indicators
 
-## License Compliance
+## License
 
-- **This project**: Apache 2.0 (Copyright 2026 tonkotsuboy)
-- **Reference source**: X Algorithm (Apache 2.0, xai-org)
-- **Relationship**: Independent implementation based on algorithm specifications (not direct code port)
+Apache 2.0 (Copyright 2026 tonkotsuboy). Based on X Algorithm specifications (Apache 2.0, xai-org).
