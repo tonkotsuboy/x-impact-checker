@@ -1,3 +1,6 @@
+<img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/9c1d24bc-92d3-4e9e-8f76-57b05ad6adf1" />
+
+
 # X Impact Checker
 
 A Claude Code skill that analyzes X (Twitter) posts for viral potential using X's actual recommendation algorithm.
