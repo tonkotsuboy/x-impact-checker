@@ -27,16 +27,34 @@ Trigger the skill with phrases like:
 
 ## Scoring System (100 points)
 
-| Factor | Max Points |
-|--------|------------|
-| Reply Potential | 25 |
-| Retweet Potential | 20 |
-| Favorite Potential | 15 |
-| Quote Potential | 12 |
-| Dwell Time | 10 |
-| Share Potential | 8 |
-| Profile Click | 5 |
-| Follow Potential | 5 |
+Based on X's official recommendation algorithm with 19 scoring elements:
+
+### Core Engagement (60 points)
+- Reply Potential (返信潜在力): 22 points
+- Retweet Potential (リツイート潜在力): 16 points
+- Favorite Potential (いいね潜在力): 12 points
+- Quote Potential (引用潜在力): 10 points
+
+### Extended Engagement (25 points)
+- Dwell Time (滞在時間): 6 points
+- Continuous Dwell Time (継続滞在時間): 4 points
+- Click Potential (クリック潜在力): 5 points
+- Photo Expand Potential (写真展開潜在力): 4 points
+- Video View Potential (動画視聴潜在力): 3 points
+- Quoted Click Potential (引用クリック潜在力): 3 points
+
+### Relationship Building (15 points)
+- Profile Click (プロフィールクリック): 5 points
+- Follow Potential (フォロー潜在力): 4 points
+- Share Potential (共有潜在力): 2 points
+- Share via DM (DM経由共有): 2 points
+- Share via Copy Link (リンクコピー共有): 2 points
+
+### Negative Signals
+- Not Interested Risk (興味なしリスク): -5 to -15 points
+- Mute Risk (ミュートリスク): -5 to -15 points
+- Block Risk (ブロックリスク): -10 to -25 points
+- Report Risk (報告リスク): -15 to -30 points
 
 ## Algorithm Source
 
@@ -70,6 +88,37 @@ npx add-skill tonkotsuboy/x-impact-checker
 - "バズるかチェックして: [投稿内容]"
 - "Xでバズる投稿にして: [投稿内容]"
 - "伸びるかチェックして: [投稿内容]"
+
+## スコアリングシステム (100点満点)
+
+Xの公式推薦アルゴリズムに基づく19要素のスコアリング:
+
+### コアエンゲージメント (60点)
+- Reply Potential (返信潜在力): 22点
+- Retweet Potential (リツイート潜在力): 16点
+- Favorite Potential (いいね潜在力): 12点
+- Quote Potential (引用潜在力): 10点
+
+### 拡張エンゲージメント (25点)
+- Dwell Time (滞在時間): 6点
+- Continuous Dwell Time (継続滞在時間): 4点
+- Click Potential (クリック潜在力): 5点
+- Photo Expand Potential (写真展開潜在力): 4点
+- Video View Potential (動画視聴潜在力): 3点
+- Quoted Click Potential (引用クリック潜在力): 3点
+
+### 関係構築 (15点)
+- Profile Click (プロフィールクリック): 5点
+- Follow Potential (フォロー潜在力): 4点
+- Share Potential (共有潜在力): 2点
+- Share via DM (DM経由共有): 2点
+- Share via Copy Link (リンクコピー共有): 2点
+
+### ネガティブシグナル
+- Not Interested Risk (興味なしリスク): -5 ~ -15点
+- Mute Risk (ミュートリスク): -5 ~ -15点
+- Block Risk (ブロックリスク): -10 ~ -25点
+- Report Risk (報告リスク): -15 ~ -30点
 
 ## アルゴリズムの出典
 
