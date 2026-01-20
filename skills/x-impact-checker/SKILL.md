@@ -73,41 +73,44 @@ Author discovery and long-term value signals.
 
 ## Output Format
 
-1. **Score**: `XX/100 (Grade: X)`
+Use emojis throughout the report for better visual clarity and engagement.
+
+1. **Score**: `🎯 XX/100 (Grade: X)`
 
 2. **Breakdown Table**:
 ```
 | Category | Factor | Score | Max | Assessment |
 |----------|--------|-------|-----|------------|
-| **Core Engagement** | | | 60 | |
-| | Reply Potential | X/22 | 22 | [reason] |
-| | Retweet Potential | X/16 | 16 | [reason] |
-| | Favorite Potential | X/12 | 12 | [reason] |
-| | Quote Potential | X/10 | 10 | [reason] |
-| **Extended Engagement** | | | 25 | |
-| | Dwell Time | X/6 | 6 | [reason] |
-| | Continuous Dwell Time | X/4 | 4 | [reason] |
-| | Click Potential | X/5 | 5 | [reason] |
-| | Photo Expand | X/4 | 4 | [reason] |
-| | Video View | X/3 | 3 | [reason] |
-| | Quoted Click | X/3 | 3 | [reason] |
-| **Relationship Building** | | | 15 | |
-| | Profile Click | X/5 | 5 | [reason] |
-| | Follow Potential | X/4 | 4 | [reason] |
-| | Share Potential | X/2 | 2 | [reason] |
-| | Share via DM | X/2 | 2 | [reason] |
-| | Share via Link | X/2 | 2 | [reason] |
-| **Negative Signals** | | | | |
-| | Not Interested Risk | -X | 0 to -15 | [reason] |
-| | Mute Risk | -X | 0 to -15 | [reason] |
-| | Block Risk | -X | 0 to -25 | [reason] |
-| | Report Risk | -X | 0 to -30 | [reason] |
-| **TOTAL** | | **XX/100** | | **Grade: X** |
+| **💬 Core Engagement** | | | 60 | |
+| | 💭 Reply Potential | X/22 | 22 | [reason] |
+| | 🔄 Retweet Potential | X/16 | 16 | [reason] |
+| | ❤️ Favorite Potential | X/12 | 12 | [reason] |
+| | 💬 Quote Potential | X/10 | 10 | [reason] |
+| **⏱️ Extended Engagement** | | | 25 | |
+| | 👀 Dwell Time | X/6 | 6 | [reason] |
+| | ⏳ Continuous Dwell Time | X/4 | 4 | [reason] |
+| | 🔗 Click Potential | X/5 | 5 | [reason] |
+| | 🖼️ Photo Expand | X/4 | 4 | [reason] |
+| | 🎥 Video View | X/3 | 3 | [reason] |
+| | 🔍 Quoted Click | X/3 | 3 | [reason] |
+| **🤝 Relationship Building** | | | 15 | |
+| | 👤 Profile Click | X/5 | 5 | [reason] |
+| | ➕ Follow Potential | X/4 | 4 | [reason] |
+| | 📤 Share Potential | X/2 | 2 | [reason] |
+| | 💌 Share via DM | X/2 | 2 | [reason] |
+| | 📋 Share via Link | X/2 | 2 | [reason] |
+| **⚠️ Negative Signals** | | | | |
+| | 😐 Not Interested Risk | -X | 0 to -15 | [reason] |
+| | 🔇 Mute Risk | -X | 0 to -15 | [reason] |
+| | 🚫 Block Risk | -X | 0 to -25 | [reason] |
+| | 🚨 Report Risk | -X | 0 to -30 | [reason] |
+| **🏆 TOTAL** | | **XX/100** | | **Grade: X** |
 ```
 
-3. **Top 5 Priority Improvements**: Specific, actionable suggestions across different categories
+3. **📈 Top 5 Priority Improvements**: Specific, actionable suggestions across different categories
+   - Use emojis like ✅, 💡, 🎯 to highlight key improvements
 
-4. **Optimized Version**: Rewritten post with improvements applied (in original language)
+4. **✨ Optimized Version**: Rewritten post with improvements applied (in original language)
 
 ## Detailed Scoring Criteria & Improvement Strategies
 
@@ -406,6 +409,46 @@ Pre-publishing optimization to maximize engagement potential, not post-hoc analy
 ## Language Handling
 
 Detect input language. Respond in same language. Keep optimized version in original language.
+
+### Bilingual Display for Category and Factor Names
+
+**When input is in Japanese:**
+- Display Category and Factor names as: `日本語訳（English Original）`
+- Examples:
+  - Category: `コアエンゲージメント（Core Engagement）`
+  - Factor: `返信潜在力（Reply Potential）`
+  - Factor: `リツイート潜在力（Retweet Potential）`
+
+**When input is in English:**
+- Display Category and Factor names in English only
+- Examples:
+  - Category: `Core Engagement`
+  - Factor: `Reply Potential`
+
+**Japanese translations with emojis for reference:**
+- 💬 Core Engagement → コアエンゲージメント
+- ⏱️ Extended Engagement → 拡張エンゲージメント
+- 🤝 Relationship Building → 関係構築
+- ⚠️ Negative Signals → ネガティブシグナル
+- 💭 Reply Potential → 返信潜在力
+- 🔄 Retweet Potential → リツイート潜在力
+- ❤️ Favorite Potential → いいね潜在力
+- 💬 Quote Potential → 引用潜在力
+- 👀 Dwell Time → 滞在時間
+- ⏳ Continuous Dwell Time → 継続滞在時間
+- 🔗 Click Potential → クリック潜在力
+- 🖼️ Photo Expand → 写真展開潜在力
+- 🎥 Video View → 動画視聴潜在力
+- 🔍 Quoted Click → 引用クリック潜在力
+- 👤 Profile Click → プロフィールクリック
+- ➕ Follow Potential → フォロー潜在力
+- 📤 Share Potential → 共有潜在力
+- 💌 Share via DM → DM経由共有
+- 📋 Share via Link → リンクコピー共有
+- 😐 Not Interested Risk → 興味なしリスク
+- 🔇 Mute Risk → ミュートリスク
+- 🚫 Block Risk → ブロックリスク
+- 🚨 Report Risk → 報告リスク
 
 ## Algorithm Reference
 
