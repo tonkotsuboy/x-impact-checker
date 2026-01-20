@@ -3,7 +3,7 @@
 
 # X Impact Checker
 
-A Claude Code skill that analyzes X (Twitter) posts for viral potential using X's actual recommendation algorithm.
+A skill that analyzes X (Twitter) posts for viral potential using X's actual recommendation algorithm.
 
 ## Installation
 
@@ -51,7 +51,7 @@ Apache 2.0
 
 # X Impact Checker (日本語)
 
-X（旧Twitter）の公式推薦アルゴリズムに基づいて、投稿のバイラル可能性を分析するClaude Codeスキルです。
+X（旧Twitter）の公式推薦アルゴリズムに基づいて、投稿がバズるかどうかをスキルです。
 
 ## インストール
 
