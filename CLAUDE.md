@@ -57,7 +57,3 @@ Normalized = max(0, min(100, Final Score))
 **Cannot detect**: Actual media, user history, author reputation, Phoenix ML predictions
 
 **Infers from**: Language patterns, content structure, emotional tone, visual indicators
-
-## License
-
-Apache 2.0 (Copyright 2026 tonkotsuboy). Based on X Algorithm specifications (Apache 2.0, xai-org).
