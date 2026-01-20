@@ -75,6 +75,30 @@ Author discovery and long-term value signals.
 
 Use emojis throughout the report for better visual clarity and engagement.
 
+### Progress Tracking
+
+Use TodoWrite tool to show analysis progress with these tasks:
+
+1. **Analyzing post content** (in_progress → completed)
+   - activeForm: "Analyzing post content"
+   - content: "Analyze post content"
+
+2. **Calculating scores across all elements** (in_progress → completed)
+   - activeForm: "Calculating scores across all elements"
+   - content: "Calculate scores across all elements"
+
+3. **Generating top 5 priority improvements** (in_progress → completed)
+   - activeForm: "Generating top 5 priority improvements"
+   - content: "Generate top 5 priority improvements"
+
+4. **Creating optimized version** (in_progress → completed)
+   - activeForm: "Creating optimized version"
+   - content: "Create optimized version"
+
+Mark each task as completed immediately after finishing that step.
+
+### Report Structure
+
 1. **Score**: `🎯 XX/100 (Grade: X)`
 
 2. **Breakdown Table**:
