@@ -1,3 +1,9 @@
+---
+paths:
+  - "**/*.md"
+  - ".git/COMMIT_EDITMSG"
+---
+
 # Project Conventions
 
 ## Language Standards
