@@ -68,3 +68,8 @@ npx add-skill tonkotsuboy/x-impact-checker
 ## ライセンス
 
 Apache 2.0
+
+--
+
+https://zenn.dev/tonkotsuboy_com/scraps/8a46a0fc93088b
+
