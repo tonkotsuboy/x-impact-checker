@@ -8,7 +8,7 @@ A skill that analyzes X (Twitter) posts for viral potential using X's actual rec
 ## Installation
 
 ```bash
-npx add-skill tonkotsuboy/x-impact-checker
+npx skills add tonkotsuboy/x-impact-checker
 ```
 
 ## Usage
