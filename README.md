@@ -8,6 +8,12 @@ A skill that analyzes X (Twitter) posts for viral potential using X's actual rec
 ## Installation
 
 ```bash
+gh skill install tonkotsuboy/x-impact-checker
+```
+
+or
+
+```bash
 npx skills add tonkotsuboy/x-impact-checker
 ```
 
@@ -72,6 +78,13 @@ Licensed under the Apache License, Version 2.0. See the LICENSE file for details
 X（旧Twitter）の公式推薦アルゴリズムに基づいて、投稿がバズるかどうかを分析するスキルです。
 
 ## インストール
+
+
+```bash
+gh skill install tonkotsuboy/x-impact-checker
+```
+
+または
 
 ```bash
 npx add-skill tonkotsuboy/x-impact-checker
