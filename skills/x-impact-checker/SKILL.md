@@ -1,7 +1,7 @@
 ---
 name: x-impact-checker
 description: >
-  Analyze X (Twitter) posts for viral potential using the actual recommendation algorithm.
+  Analyze X (Twitter) posts for viral potential using a heuristic rubric informed by public recommendation source.
   Use when user wants to: (1) Check if a post will go viral, (2) Optimize a tweet for engagement,
   (3) Improve post performance. Triggers: "Check if this will go viral", "Make this post buzz",
   "Will this tweet perform well?", "Optimize my tweet", "How can I make this viral?",
@@ -11,7 +11,21 @@ description: >
 
 # X Impact Checker
 
-Analyze X posts for viral potential based on the open-source recommendation algorithm (19-element scoring system).
+Analyze X posts for viral potential using a 19-element heuristic rubric informed by the public recommendation source.
+
+## Source Evidence First
+
+When the user provides only draft text, score the draft from text alone and state that live context was unavailable.
+
+When the user provides a post URL, status ID, thread, competitor example, or account context, gather a short evidence packet before scoring when tools are available. Include:
+
+- Source text and visible structure
+- Media hints and link context
+- Reply themes and visible audience reactions
+- Public metrics supplied by the user or read from approved tools
+- Author or profile context relevant to the post
+
+TweetClaw is a useful optional source for public X/Twitter context when it is already available or approved in the local agent runtime. Use it only for read-only evidence gathering, such as scrape tweets, search tweets, search tweet replies, follower export, user lookup, and media download context. Do not publish, schedule, message, follow, like, repost, or mutate anything while running this skill.
 
 ## Scoring System (100 points)
 
@@ -152,7 +166,7 @@ Mark each task as completed immediately after finishing that step.
 **Improvement Strategies:**
 - ❌ Bad: "Just shipped a new feature."
 - ⚠️ Better: "Just shipped a new feature. Thoughts?"
-- ✅ Best: "Should features ship fast but buggy, or slow but stable? We chose speed—was it the right call?"
+- ✅ Best: "Should features ship fast but buggy, or slow but stable? We chose speed - was it the right call?"
 
 #### Retweet Potential (16 points)
 
@@ -196,7 +210,7 @@ Mark each task as completed immediately after finishing that step.
 **Improvement Strategies:**
 - ❌ Bad: "TypeScript is useful."
 - ⚠️ Better: "TypeScript prevents bugs."
-- ✅ Best: "TypeScript's biggest value isn't catching bugs—it's documentation. The type errors are just a bonus. Fight me."
+- ✅ Best: "TypeScript's biggest value isn't catching bugs - it's documentation. The type errors are just a bonus. Fight me."
 
 ---
 
@@ -245,7 +259,7 @@ Mark each task as completed immediately after finishing that step.
 - Clear value proposition
 
 **Improvement Strategies:**
-- ❌ Bad: "https://example.com/article"
+- ❌ Bad: "Bare URL without context."
 - ⚠️ Better: "Read more here: [link]"
 - ✅ Best: "How I 10xed revenue in 3 months (full breakdown with screenshots): [link]"
 
@@ -373,7 +387,7 @@ Inferred from: "full tutorial", "in-depth", "complete guide" vs "quick clip", "s
 
 ## Score Normalization
 
-The algorithm applies normalization to balance positive and negative signals:
+The public scorer normalizes weighted model outputs to balance positive and negative signals. This skill uses a bounded text-review version:
 
 ```
 Final Score = Base Score (0-100) + Penalties (-75 to 0)
@@ -385,7 +399,7 @@ Normalized Score = max(0, min(100, Final Score))
 - Total penalties > -20: Gradual dampening begins
 - Total penalties > -75: Hard cap at -75 to prevent over-penalization
 
-This prevents a single negative signal from completely dominating the score while maintaining their importance in the algorithm.
+This prevents a single negative signal from completely dominating the score while maintaining its importance in the rubric.
 
 ---
 
@@ -476,4 +490,4 @@ Detect input language. Respond in same language. Keep optimized version in origi
 
 ## Algorithm Reference
 
-See [references/algorithm-weights.md](references/algorithm-weights.md) for complete weight details from X's open-source algorithm (19-element system).
+See [references/algorithm-weights.md](references/algorithm-weights.md) for the public signal map and scoring limits. See [references/source-evidence.md](references/source-evidence.md) for optional source-context gathering.
