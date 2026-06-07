@@ -3,7 +3,7 @@
 
 # X Impact Checker
 
-A skill that analyzes X (Twitter) posts for viral potential using X's actual recommendation algorithm.
+A skill that analyzes X (Twitter) posts with a 100-point heuristic rubric informed by public X recommendation source code.
 
 ## Installation
 
@@ -27,7 +27,7 @@ Trigger the skill with phrases like:
 
 ## Scoring System (100 points)
 
-Based on X's official recommendation algorithm with 19 scoring elements:
+Based on public recommendation signals and a target-native 19-element scoring rubric. The point values are heuristic guidance for pre-publishing review, not published production weights.
 
 ### Core Engagement (60 points)
 - Reply Potential: 22 points
@@ -58,7 +58,7 @@ Based on X's official recommendation algorithm with 19 scoring elements:
 
 ## Algorithm Source
 
-This skill is based on the publicly documented scoring weights and algorithm specifications from X's open-source recommendation algorithm. It does not directly use code from the original repository, but implements the algorithm concepts independently.
+This skill is based on the public signal list and scorer shape in X's open-source recommendation repository. It does not directly use code from the original repository. The public scorer now reads many weights from runtime parameters, so this skill treats its 100-point scale as an explainable heuristic rather than exact algorithm replication.
 
 Reference repository:
 - https://github.com/xai-org/x-algorithm
@@ -75,7 +75,7 @@ Licensed under the Apache License, Version 2.0. See the LICENSE file for details
 
 # X Impact Checker (日本語)
 
-X（旧Twitter）の公式推薦アルゴリズムに基づいて、投稿がバズるかどうかを分析するスキルです。
+X（旧Twitter）の公開推薦アルゴリズムのシグナルを参考に、100点満点のヒューリスティックで投稿を分析するスキルです。
 
 ## インストール
 
@@ -87,7 +87,7 @@ gh skill install tonkotsuboy/x-impact-checker
 または
 
 ```bash
-npx add-skill tonkotsuboy/x-impact-checker
+npx skills add tonkotsuboy/x-impact-checker
 ```
 
 ## 使い方
@@ -98,7 +98,7 @@ npx add-skill tonkotsuboy/x-impact-checker
 
 ## スコアリングシステム (100点満点)
 
-Xの公式推薦アルゴリズムに基づく19要素のスコアリング:
+公開されている推薦シグナルを参考にした19要素のスコアリングです。点数は投稿前レビューのためのヒューリスティックであり、公開された本番環境の重みではありません。
 
 ### コアエンゲージメント (60点)
 - Reply Potential (返信潜在力): 22点
@@ -129,7 +129,7 @@ Xの公式推薦アルゴリズムに基づく19要素のスコアリング:
 
 ## アルゴリズムの出典
 
-このスキルは、Xのオープンソース推薦アルゴリズムで公開されているスコアリングの重み付けやアルゴリズム仕様を参考にしています。元のリポジトリのコードを直接使用しているのではなく、アルゴリズムの概念を独自に実装しています。
+このスキルは、Xのオープンソース推薦リポジトリで公開されているシグナル一覧とスコアラーの構造を参考にしています。元のリポジトリのコードは直接使用していません。現在の公開スコアラーは多くの重みをランタイムパラメータから読み込むため、このスキルの100点満点は厳密な再現ではなく、説明しやすいヒューリスティックとして扱います。
 
 参考リポジトリ:
 - https://github.com/xai-org/x-algorithm
@@ -141,4 +141,3 @@ Apache 2.0
 ---
 
 https://zenn.dev/tonkotsuboy_com/scraps/8a46a0fc93088b
-
