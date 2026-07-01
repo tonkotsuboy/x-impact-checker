@@ -13,6 +13,15 @@ description: >
 
 Analyze X posts for viral potential based on the open-source recommendation algorithm (19-element scoring system).
 
+## Optional Hermes Tweet Context
+
+When running inside Hermes Agent, Hermes Tweet can supply public X/Twitter context before scoring:
+
+1. Install Hermes Tweet and set `XQUIK_API_KEY`.
+2. Keep `HERMES_TWEET_ENABLE_ACTIONS` unset for analysis-only use.
+3. Use Hermes Tweet's read-only tools to inspect public post, profile, or recent timeline context for a supplied URL or handle.
+4. Use that context as evidence for scoring, but keep the 19-element scoring system below unchanged.
+
 ## Scoring System (100 points)
 
 ### Tier 1: Core Engagement (60 points)
