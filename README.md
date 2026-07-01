@@ -25,6 +25,10 @@ Trigger the skill with phrases like:
 - "Make this post buzz: [your post]"
 - "Optimize my tweet: [your post]"
 
+## Optional Hermes Tweet Context
+
+Hermes Agent users can install [Hermes Tweet](https://github.com/Xquik-dev/hermes-tweet) and set `XQUIK_API_KEY` to inspect public post, profile, or recent timeline context before scoring a URL, handle, or draft. Leave `HERMES_TWEET_ENABLE_ACTIONS` unset for analysis-only use.
+
 ## Scoring System (100 points)
 
 Based on X's official recommendation algorithm with 19 scoring elements:
@@ -96,6 +100,10 @@ npx add-skill tonkotsuboy/x-impact-checker
 - "Xでバズる投稿にして: [投稿内容]"
 - "伸びるかチェックして: [投稿内容]"
 
+## 任意の Hermes Tweet コンテキスト
+
+Hermes Agent では [Hermes Tweet](https://github.com/Xquik-dev/hermes-tweet) をインストールし、`XQUIK_API_KEY` を設定すると、URL、ハンドル、下書きを採点する前に公開投稿、プロフィール、最近のタイムライン文脈を確認できます。分析だけなら `HERMES_TWEET_ENABLE_ACTIONS` は未設定のままにしてください。
+
 ## スコアリングシステム (100点満点)
 
 Xの公式推薦アルゴリズムに基づく19要素のスコアリング:
@@ -141,4 +149,3 @@ Apache 2.0
 ---
 
 https://zenn.dev/tonkotsuboy_com/scraps/8a46a0fc93088b
-
